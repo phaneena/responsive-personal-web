@@ -1,0 +1,402 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    background-color:transparent;
+}
+.nav-item{
+    color: black;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+.nav-link:hover{
+    color:white !important;
+    background-color: black;
+}
+.navbar-brand{
+    color: black;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* main section */
+.main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./lap.jpeg) no-repeat center center;
+    background-size: cover;
+    filter: blur(5px); /* Apply blur to the background image */
+    z-index: 1; /* Ensure it's behind the text */
+}
+
+.main h1, .main h4, .main .bt1, .main .bt2 {
+    position: relative;
+    z-index: 2; /* Ensure text and buttons are above the blurred background */
+    color: white; /* Adjust text color for visibility */
+}
+
+/* .main {
+    background:url(./lap.jpeg)no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    
+}
+.main.h1{
+    font-size: 7rem;
+    font-weight: 700;
+}
+.main.h4{
+    font-size: 2rem;
+    line-height: 1;
+} */
+.main .bt1{
+    height: 55px;
+    width: 140px;
+    color: white;
+    background-color: rgb(238, 47, 79);
+    outline: none;
+    font-weight: bold;
+    border: 1px solid transparent;
+    border-radius: 6px;
+}
+/* .main .bt1:hover{
+    background-color:  rgb(147, 211, 147);
+    transition: 0.5s;
+}
+.main .bt2{
+    height: 55px;
+    width: 160px;
+    color: rgb(238, 47, 79);
+    background-color: transparent;
+    outline: none;
+    border: 0.5px solid  rgb(238, 47, 79);
+    font-weight: bold;
+    border-radius: 6px;
+}
+.main .bt2:hover{
+    background-color: rgb(147, 211, 147);
+    transition: 0.5s;
+    color: white;
+    border: 1px solid transparent;
+
+} */
+/* Add styles for anchor tags used as buttons */
+.bt1, .bt2 {
+  display: inline-block;
+  height: 55px;
+  color: white;
+  background-color: rgb(238, 47, 79);
+  outline: none;
+  font-weight: bold;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 55px;
+  text-decoration: none;
+}
+
+.bt1:hover {
+  background-color: rgb(147, 211, 147);
+  transition: 0.5s;
+}
+
+.bt2 {
+  color: rgb(238, 47, 79);
+  background-color: transparent;
+  border: 0.5px solid rgb(238, 47, 79);
+}
+
+.bt2:hover {
+  background-color: rgb(147, 211, 147);
+  color: white;
+  border: 1px solid transparent;
+}
+
+
+/* about section */
+
+h1{
+   font-size: 3rem; 
+   font-weight: 900;
+}
+.about img{
+    box-shadow: 5px 23px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 5px 23px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 23px 5px 0px rgba(0,0,0,0.75);
+}
+.progress{
+    background-color: rgb(138, 127, 127);
+    justify-content: flex-start;
+    border-radius: 50px;
+    align-items: center;
+    position: relative;
+    display: flex;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 15px;
+
+}
+.value1{
+    animation: load1 3s normal forwards;
+    border-radius: 50px;
+    background-color: black;
+    height: 40px;
+    width: 0;
+
+
+}
+/* Container for social media icons */
+.social-icons {
+  display: flex;
+  justify-content: center; /* Center align icons horizontally */
+  gap: 20px; /* Space between icons */
+  margin-top: 20px;
+}
+
+/* Style for each icon */
+.social-icons a {
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s, transform 0.3s; /* Smooth color transition and scaling */
+}
+
+/* Instagram icon styling */
+.social-icons .fa-instagram {
+  color: #E1306C; /* Instagram color */
+  font-size: 40px; /* Icon size */
+}
+
+.social-icons .fa-instagram:hover {
+  color: #C13584; /* Darker shade on hover */
+  transform: scale(1.1); /* Slightly increase the size on hover */
+}
+
+/* LinkedIn icon styling */
+.social-icons .fa-linkedin {
+  color: #0077B5; /* LinkedIn color */
+  font-size: 40px; /* Icon size */
+}
+
+.social-icons .fa-linkedin:hover {
+  color: #005582; /* Darker shade on hover */
+  transform: scale(1.1); /* Slightly increase the size on hover */
+}
+
+/* GitHub icon styling */
+.social-icons .fa-github {
+  color: #333; /* GitHub color */
+  font-size: 40px; /* Icon size */
+}
+
+.social-icons .fa-github:hover {
+  color: #444; /* Slightly lighter shade on hover */
+  transform: scale(1.1); /* Slightly increase the size on hover */
+}
+
+.progress p{
+    color: white;
+    padding: 12px;
+    display: block;
+    margin: 0;
+}
+@keyframes load1{
+    0%{
+        width: 0;
+    }
+    100%{
+        width:93%
+    }
+}
+.value2{
+    animation: load2 3s normal forwards;
+    border-radius: 50px;
+    background-color: black;
+    height: 40px;
+    width: 0;
+}
+.value3{
+    animation: load3 3s normal forwards;
+    border-radius: 50px;
+    background-color: black;
+    height: 40px;
+    width: 0;
+}
+.value4{
+    animation: load4 3s normal forwards;
+    border-radius: 50px;
+    background-color: black;
+    height: 40px;
+    width: 0;
+}
+@keyframes load2{
+    0%{
+        width: 0;
+    }
+    100%{
+        width:70%
+    }
+}
+@keyframes load3{
+    0%{
+        width: 0;
+    }
+    100%{
+        width:60%
+    }
+}
+@keyframes load4{
+    0%{
+        width: 0;
+    }
+    100%{
+        width:80%
+    }
+}
+
+
+/* skills */
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .skills {
+    background-color:black; /* Black background */
+    color: navy; /* White text */
+    padding: 20px 0;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .skill-card {
+    background-color:lightgreen;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .skill-card img {
+    max-width: 50px;
+    margin-bottom: 15px;
+  }
+  
+  .skill-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .skill-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Media query for smaller devices */
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 2rem;
+    }
+  
+    .skill-card h3 {
+      font-size: 1.3rem;
+    }
+  
+    .skill-card p {
+      font-size: 0.9rem;
+    }
+  }
+  
+
+  /* project */
+
+
+  #projects .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  #projects .card:hover {
+    transform: translateY(-10px);
+  }
+  #projects {
+    background-color: #d9dde0;
+    padding: 60px 0;
+  }
+  .card-body{
+    background-color: bisque;
+  }
+  
+
+  /* contact */
+
+  #contact {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+  }
+  
+  #contact h2 {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  .form-control {
+    border-radius: 5px;
+    height: 50px;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+  
+  textarea.form-control {
+    height: auto;
+  }
+  
+  .btn-primary {
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #16a085;
+    border-color: #16a085;
+  }
+  
